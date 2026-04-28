@@ -1,7 +1,9 @@
 # 🚀 Muthu Raja – Developer Portfolio
 
 🌐 **Live Website:**
-👉 https://profile-pygpsobq4-muthu-raja-ms-projects.vercel.app/
+👉 https://profile-2g6w89f11-muthu-raja-ms-projects.vercel.app/
+
+🔄 Latest (Auto-updated): https://profile-git-main-muthu-raja-ms-projects.vercel.app/
 
 ---
 
