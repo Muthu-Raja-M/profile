@@ -277,7 +277,7 @@ export default function Projects() {
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         layout
       >
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           {filtered.map((project) => (
             <ProjectCard
               key={project.id}
