@@ -26,29 +26,29 @@ export const navLinks = [
   { id: 'contact', label: 'Contact' },
 ];
 
-export const aboutText = `I'm a Computer Science Engineering student (2022–2026) passionate about crafting clean, intuitive digital experiences. With hands-on internship experience in web development and UI/UX design, I bridge the gap between beautiful design and functional code. I love solving real-world problems through technology and continuously strive to improve my craft.`;
+export const aboutText = `I'm a Computer Science Engineering graduate (2022–2026) passionate about crafting clean, intuitive digital experiences. With hands-on internship experience in web development and UI/UX design, I bridge the gap between beautiful design and functional code. I love solving real-world problems through technology and continuously strive to improve my craft.`;
 
 export const skills = {
   uiux: [
-    { name: 'UI Design', level: 85 },
-    { name: 'Wireframing', level: 90 },
-    { name: 'Prototyping', level: 80 },
-    { name: 'User Flow Planning', level: 75 },
-    { name: 'Responsive Design', level: 88 },
+    { name: 'UI Design' },
+    { name: 'Wireframing' },
+    { name: 'Prototyping' },
+    { name: 'User Flow Planning' },
+    { name: 'Responsive Design' },
   ],
   development: [
-    { name: 'Python', level: 80 },
-    { name: 'MySQL', level: 75 },
-    { name: 'Java', level: 70 },
-    { name: 'HTML', level: 95 },
-    { name: 'CSS', level: 90 },
-    { name: 'JavaScript', level: 82 },
+    { name: 'Python' },
+    { name: 'MySQL' },
+    { name: 'Java' },
+    { name: 'HTML' },
+    { name: 'CSS' },
+    { name: 'JavaScript' },
   ],
   tools: [
-    { name: 'Figma', level: 88 },
-    { name: 'Git', level: 78 },
-    { name: 'VS Code', level: 92 },
-    { name: 'XAMPP', level: 72 },
+    { name: 'Figma' },
+    { name: 'Git' },
+    { name: 'VS Code' },
+    { name: 'XAMPP' },
   ],
 };
 

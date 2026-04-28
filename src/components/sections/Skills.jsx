@@ -38,29 +38,17 @@ const categories = [
   },
 ];
 
-function SkillBar({ skill, barGradient, delay = 0 }) {
+function SkillBadge({ skill, badgeClass, delay = 0 }) {
   return (
-    <div className="group">
-      <div className="flex justify-between mb-1.5">
-        <span className="text-sm text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
-          {skill.name}
-        </span>
-        <span className="text-xs font-medium text-gray-500 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors">
-          {skill.level}%
-        </span>
-      </div>
-      <div className="w-full h-2 bg-gray-200 dark:bg-dark-200 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: delay * 0.1 + 0.2, ease: 'easeOut' }}
-          className={`h-full bg-gradient-to-r ${barGradient} rounded-full relative`}
-        >
-          <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-        </motion.div>
-      </div>
-    </div>
+    <motion.span
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: delay * 0.05 }}
+      className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all hover:shadow-md ${badgeClass}`}
+    >
+      {skill.name}
+    </motion.span>
   );
 }
 
@@ -81,12 +69,12 @@ function SkillCard({ category }) {
         </h3>
       </div>
 
-      <div className="space-y-4">
+      <div className="flex flex-wrap gap-2">
         {category.data.map((skill, i) => (
-          <SkillBar
+          <SkillBadge
             key={skill.name}
             skill={skill}
-            barGradient={category.bar}
+            badgeClass={category.badge}
             delay={i}
           />
         ))}

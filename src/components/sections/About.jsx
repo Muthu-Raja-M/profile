@@ -6,7 +6,7 @@ import { aboutText, personalInfo } from '../../data/constants';
 import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer } from '../../utils/motionVariants';
 
 const highlights = [
-  { icon: FiUser, label: 'CSE Student', value: 'B.Tech 2022–2026' },
+  { icon: FiUser, label: 'CSE Graduate', value: 'B.E 2022–2026' },
   { icon: FiMapPin, label: 'Location', value: personalInfo.location },
   { icon: FiCalendar, label: 'Experience', value: '2 Internships' },
 ];
@@ -65,28 +65,23 @@ export default function About() {
           <h3 className="text-lg font-display font-semibold mb-6 text-gray-800 dark:text-gray-200">
             Quick Overview
           </h3>
-          <div className="space-y-5">
+          <div className="flex flex-wrap gap-2">
             {[
-              { label: 'Frontend Development', value: 88 },
-              { label: 'UI/UX Design', value: 85 },
-              { label: 'Backend Development', value: 72 },
-              { label: 'Problem Solving', value: 80 },
+              { label: 'Frontend Development' },
+              { label: 'UI/UX Design' },
+              { label: 'Backend Development' },
+              { label: 'Problem Solving' },
             ].map((skill) => (
-              <div key={skill.label}>
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm text-gray-700 dark:text-gray-300">{skill.label}</span>
-                  <span className="text-sm font-medium text-primary-500">{skill.value}%</span>
-                </div>
-                <div className="w-full h-2 bg-gray-200 dark:bg-dark-200 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.value}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
-                    className="h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full"
-                  />
-                </div>
-              </div>
+              <motion.span
+                key={skill.label}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="px-3 py-1.5 bg-primary-500/10 text-primary-500 dark:bg-primary-500/20 dark:text-primary-400 rounded-full text-sm font-medium"
+              >
+                {skill.label}
+              </motion.span>
             ))}
           </div>
         </motion.div>
